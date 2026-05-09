@@ -3,6 +3,9 @@ from keras.datasets import mnist
 import numpy as np
 import os
 
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+
 def download_mnist_keras(save_path='./mnist_data'):
     """
     Download MNIST dataset using Keras
